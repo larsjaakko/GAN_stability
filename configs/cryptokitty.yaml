@@ -1,10 +1,10 @@
 data:
-  type: npy
-  train_dir: data/celebA-HQ
-  test_dir: data/celebA-HQ
+  type: image
+  train_dir: data/cryptokitty
+  test_dir: data/test
   lsun_categories_train: [bedroom_train]
   lsun_categories_test: [bedroom_test]
-  img_size: 1024
+  img_size: 128
   nlabels: 1
 generator:
   name: resnet
@@ -22,7 +22,7 @@ z_dist:
   type: gauss
   dim: 256
 training:
-  out_dir: output/celebAHQ
+  out_dir: output/cryptokitty-256
   gan_type: standard
   reg_type: real
   reg_param: 10.
@@ -32,11 +32,11 @@ training:
   model_average_beta: 0.999
   model_average_reinit: false
   monitoring: tensorboard
-  sample_every: 1000
+  sample_every: 250
   sample_nlabels: 20
   inception_every: -1
   save_every: 900
-  backup_every: 100000
+  backup_every: 50000
   restart_every: -1
   optimizer: rmsprop
   lr_g: 0.0001

@@ -1,16 +1,7 @@
-# GAN stability
-This repository contains the experiments in the supplementary material for the paper [Which Training Methods for GANs do actually Converge?](https://avg.is.tuebingen.mpg.de/publications/meschedericml2018).
+# GAN stability - Cryptokitty edition
+This repository contains an experiment based on the paper [Which Training Methods for GANs do actually Converge?](https://avg.is.tuebingen.mpg.de/publications/meschedericml2018), using a dataset of cryptokitties.
 
-To cite this work, please use
-```
-@INPROCEEDINGS{Mescheder2018ICML,
-  author = {Lars Mescheder and Sebastian Nowozin and Andreas Geiger},
-  title = {Which Training Methods for GANs do actually Converge?,
-  booktitle = {International Conference on Machine Learning (ICML)},
-  year = {2018}
-}
-```
-You can find further details on [our project page](https://avg.is.tuebingen.mpg.de/research_projects/convergence-and-stability-of-gan-training).
+You can find further details on [the project page](https://avg.is.tuebingen.mpg.de/research_projects/convergence-and-stability-of-gan-training).
 
 # Usage
 First download your data and put it into the `./data` folder.
@@ -40,11 +31,6 @@ python interpolate_class.py PATH_TO_CONFIG
 
 # Results
 ## celebA-HQ
-![celebA-HQ](results/celebA-HQ.jpg)
-
-## Imagenet
-![Imagenet 0](results/imagenet_00.jpg)
-![Imagenet 1](results/imagenet_01.jpg)
-![Imagenet 2](results/imagenet_02.jpg)
-![Imagenet 3](results/imagenet_03.jpg)
-![Imagenet 4](results/imagenet_04.jpg)
+![300000 iterations](results/00300000.png)
+![400000 iterations](results/00400000.png)
+![470000 iterations](results/00470000.png)

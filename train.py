@@ -193,8 +193,14 @@ while True:
         g_loss_last = logger.get_last('losses', 'generator')
         d_loss_last = logger.get_last('losses', 'discriminator')
         d_reg_last = logger.get_last('losses', 'regularizer')
-        print('[epoch %0d, it %4d] g_loss = %.4f, d_loss = %.4f, reg=%.4f'
-              % (epoch_idx, it, g_loss_last, d_loss_last, d_reg_last))
+        #print('[epoch %0d, it %4d] g_loss = %.4f, d_loss = %.4f, reg=%.4f'
+        #      % (epoch_idx, it, g_loss_last, d_loss_last, d_reg_last))
+
+        #print('{{"metric": "Epoch", "value": {}, "step":{}}}'.format(epoch_idx))
+        #print('{{"metric": "Iteration", "value": {}}}'.format(it))
+        print('{{"metric": "Loss_G", "value": {}, "step":{}}}'.format(g_loss_last, it))
+        print('{{"metric": "Loss_D", "value": {}, "step":{}}}'.format(d_loss_last, it))
+        print('{{"metric": "reg", "value": {}, "step":{}}}'.format(d_reg_last, it))
 
         # (i) Sample if necessary
         if (it % config['training']['sample_every']) == 0:
